@@ -10,13 +10,12 @@ router.post("/api/analyze", async (req, res) => {
   const consensus = Consensus(motifs);
 
   // Insert the results into the database
-  const result = new Result({
+
+  const result = await Result.create({
     count,
     profile,
     consensus,
   });
-
-  await result.save();
 
   return res.send({
     message: "Analysis Completed",

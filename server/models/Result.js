@@ -15,7 +15,7 @@ Result.init(
       type: DataTypes.STRING,
     },
   },
-  { sequelize, modelName: "Result" }
+  { sequelize, modelName: "result" }
 );
 
 module.exports = Result;
