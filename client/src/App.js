@@ -52,7 +52,7 @@ function App() {
         .replace(/[^A-Za-z0-9,]+/g, "")
         .split(",")
         .map((item) => item.trim());
-      const response = await fetch("http://localhost:5000/api/analyze", {
+      const response = await fetch("https://biolab-backend.onrender.com/api/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
