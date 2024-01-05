@@ -3,7 +3,8 @@ const app = require("./app");
 
 const port = process.env.PORT || 5000;
 
+sequelize.sync({});
+
 app.listen(port, async () => {
-  await sequelize.sync({ force: true });
   console.log(`Server is running on port ${port}`);
 });
